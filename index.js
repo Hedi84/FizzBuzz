@@ -44,6 +44,7 @@ function isWord (number) {
       string = five(number, string);
       string = seven(number, string);
       string = eleven(number, string);
+      string = thirteen(number, string);
       string = seventeen(number,string);
       if (string === "") {
         return number
@@ -105,12 +106,26 @@ function seven (number, string) {
   return string
 }
 
-function thirteen (number) {
+function thirteen (number, string) {
   if (number % 13 === 0) {
-    return 'Fezz';
-  } else {
-    return false;
+    if (string === "") {
+      string = "Fezz"
+    } else {
+      console.log("string not empty")
+      if (string[4] == "B") {
+        console.log("5th char is B")
+        console.log(string)
+        array = string.match(/.{1,4}/g);
+        console.log(array);
+        string = array[0] + "Fezz" + array[1]
+      } else {
+        console.log("4th char is not B, string is")
+        console.log(string)
+        string = string + "Fezz"
+      }
+    }
   }
+  return string
 }
 
 function seventeen (number, string) {
