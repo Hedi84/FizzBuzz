@@ -1,3 +1,7 @@
+const imports = require('./interface.js');
+
+
+
 //create an array with numbers 1-100
 function createArray () {
   const numbersArray = []
@@ -60,6 +64,7 @@ function fezz (number, word) {
 
 // run program
 function runProgram () {
+  imports.userInteface()
   array = createArray();
   printNumbers(array);
 }
