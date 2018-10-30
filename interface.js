@@ -1,7 +1,9 @@
-
+const readline = require('readline-sync');
 
 function userInterface () {
-  console.log("Welcome to this very strange... game?\n please enter the numbers of the rules you would like to apply.\nI would like to see if the numbers are a multiple of:\n")
+  console.log("Check numbers from 1 to...?");
+  const response = readline.prompt();
+  return Number(response);
 }
 
 exports.userInteface = userInterface;

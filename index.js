@@ -3,10 +3,10 @@ const imports = require('./interface.js');
 
 
 //create an array with numbers 1-100
-function createArray () {
+function createArray (number) {
   const numbersArray = []
-  let value = 150;
-  while (value < 300) {
+  let value = 1;
+  while (value < number) {
     value++
     numbersArray.push(value);
   }
@@ -64,8 +64,8 @@ function fezz (number, word) {
 
 // run program
 function runProgram () {
-  imports.userInteface()
-  array = createArray();
+  number = imports.userInteface()
+  array = createArray(number);
   printNumbers(array);
 }
 
