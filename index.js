@@ -43,6 +43,7 @@ function fizzBuzz (number) {
     }
 }
 
+// check if the number is also a multiple of 13 and apply fezz rules
 function fezz (number, word) {
   if (number % 13 === 0 && word === 'Fizz') {
     return 'FizzFezz'
@@ -57,6 +58,7 @@ function fezz (number, word) {
   }
 }
 
+// run program
 function runProgram () {
   array = createArray();
   printNumbers(array);
