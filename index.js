@@ -1,12 +1,12 @@
 //create an array with numbers 1-100
 function createArray () {
-  const oneToHundredArray = []
-  let value = 0;
-  while (value < 100) {
+  const numbersArray = []
+  let value = 150;
+  while (value < 300) {
     value++
-    oneToHundredArray.push(value);
+    numbersArray.push(value);
   }
-  return oneToHundredArray
+  return numbersArray
 }
 
 // prints numbers 1 to 100
@@ -23,14 +23,38 @@ function printNumbers (array) {
 // checks if the number is a multiple of 3 and 5(FizzBuzz), 3(Fizz), or 5 (FizzBuzz)
 function fizzBuzz (number) {
     if (number % 3 === 0 && number % 5 === 0) {
-      return 'FizzBuzz'
+      return fezz(number, 'FizzBuzz')
+    } else if (number % 7 === 0 && number % 3 === 0) {
+      return fezz(number, 'FizzBang')
+    } else if (number % 7 === 0 && number % 5 === 0) {
+      return fezz(number, 'BuzzBang')
+    } else if (number % 11 === 0) {
+      return fezz(number, 'Bong')
+    } else if (number % 13 === 0) {
+      return "Fezz"
     } else if (number % 3 === 0) {
-      return "Fizz"
+      return fezz(number, 'Fizz')
     } else if (number % 5 === 0) {
-      return "Buzz"
+      return fezz(number, 'Buzz')
+    } else if (number % 7 === 0) {
+      return fezz(number, 'Bang')
     } else {
       return number
     }
+}
+
+function fezz (number, word) {
+  if (number % 13 === 0 && word === 'Fizz') {
+    return 'FizzFezz'
+  } else if (number % 13 === 0 && word === 'FizzBuzz') {
+    return 'FizzFezzBuzz'
+  } else if (number % 13 === 0 && word === 'FizzBang') {
+    return 'FizzFezzBang'
+  } else if (number % 13 === 0 ) {
+    return word + 'Fezz'
+  } else {
+    return word
+  }
 }
 
 function runProgram () {
